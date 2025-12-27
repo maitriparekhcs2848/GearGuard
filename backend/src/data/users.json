@@ -1,0 +1,23 @@
+[
+  {
+    "id": "a7604576-14a0-4510-86b8-fae0be5b2f9a",
+    "email": "kushkelaiya@gmail.com",
+    "password": "$2b$10$XbPDUQmW2l6ggZt4UwoSgefJ1Ad4hW2t4M2Job4PREmp6uSm1tKle",
+    "name": "Kush Kelaiya",
+    "createdAt": "2025-12-27T10:01:31.140Z"
+  },
+  {
+    "id": "98513cbd-5f80-46a7-92dc-1b1f94d2ccb0",
+    "email": "dhanvi.j@ahduni.edu.in",
+    "password": "$2b$10$Q8p6lrQ/NCGGSrOuI5It4Oc9jlDfIUX.y/jPOlM540xfm7os2xl2e",
+    "name": "Dhanvi Joshi",
+    "createdAt": "2025-12-27T10:19:15.535Z"
+  },
+  {
+    "id": "8032b91d-3421-4868-b0aa-48b32c2fc12c",
+    "email": "maitri.cs2848@gmail.com",
+    "password": "$2b$10$dhAZMuZ6RCmsEcwjp2okZuq.qBy4rjYPOAhUjf9G2ByJnZ/yvbOOC",
+    "name": "Maitri P",
+    "createdAt": "2025-12-27T10:22:34.589Z"
+  }
+]
