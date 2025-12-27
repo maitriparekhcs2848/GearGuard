@@ -1,0 +1,505 @@
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/500.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/inter/700.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Background & Surfaces */
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    
+    /* Primary - Industrial Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 217 91% 70%;
+    
+    /* Secondary - Slate */
+    --secondary: 215 20% 95%;
+    --secondary-foreground: 222 47% 11%;
+    
+    /* Muted */
+    --muted: 215 20% 95%;
+    --muted-foreground: 215 16% 47%;
+    
+    /* Accent */
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Status Colors */
+    --success: 145 63% 42%;
+    --success-foreground: 0 0% 100%;
+    
+    --warning: 37 90% 51%;
+    --warning-foreground: 0 0% 100%;
+    
+    --danger: 6 78% 57%;
+    --danger-foreground: 0 0% 100%;
+    
+    --info: 204 70% 53%;
+    --info-foreground: 0 0% 100%;
+    
+    --destructive: 6 78% 57%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Borders & Inputs */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
+    
+    --radius: 0.625rem;
+    
+    /* Sidebar - Dark Navy */
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 215 20% 85%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 47% 18%;
+    --sidebar-accent-foreground: 215 20% 95%;
+    --sidebar-border: 222 47% 18%;
+    --sidebar-ring: 217 91% 60%;
+    --sidebar-muted: 215 16% 47%;
+    
+    /* Kanban Columns */
+    --kanban-new: 217 91% 60%;
+    --kanban-progress: 37 90% 51%;
+    --kanban-repaired: 145 63% 42%;
+    --kanban-scrap: 6 78% 57%;
+    
+    /* Column Backgrounds */
+    --kanban-new-bg: 217 91% 97%;
+    --kanban-progress-bg: 37 90% 97%;
+    --kanban-repaired-bg: 145 63% 97%;
+    --kanban-scrap-bg: 6 78% 97%;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(222 47% 11% / 0.05);
+    --shadow: 0 1px 3px 0 hsl(222 47% 11% / 0.1), 0 1px 2px -1px hsl(222 47% 11% / 0.1);
+    --shadow-md: 0 4px 6px -1px hsl(222 47% 11% / 0.1), 0 2px 4px -2px hsl(222 47% 11% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(222 47% 11% / 0.1), 0 4px 6px -4px hsl(222 47% 11% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(222 47% 11% / 0.1), 0 8px 10px -6px hsl(222 47% 11% / 0.1);
+    --shadow-glow: 0 0 20px hsl(217 91% 60% / 0.15);
+  }
+
+  .dark {
+    --background: 222 47% 7%;
+    --foreground: 210 20% 98%;
+    
+    --card: 222 47% 11%;
+    --card-foreground: 210 20% 98%;
+    
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 20% 98%;
+    
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 217 91% 50%;
+    
+    --secondary: 222 47% 18%;
+    --secondary-foreground: 210 20% 98%;
+    
+    --muted: 222 47% 18%;
+    --muted-foreground: 215 20% 65%;
+    
+    --accent: 222 47% 18%;
+    --accent-foreground: 210 20% 98%;
+    
+    --destructive: 6 78% 57%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 222 47% 18%;
+    --input: 222 47% 18%;
+    --ring: 217 91% 60%;
+    
+    --sidebar-background: 222 47% 7%;
+    --sidebar-foreground: 215 20% 85%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 47% 14%;
+    --sidebar-accent-foreground: 215 20% 95%;
+    --sidebar-border: 222 47% 14%;
+    --sidebar-ring: 217 91% 60%;
+    --sidebar-muted: 215 16% 55%;
+    
+    /* Dark mode column backgrounds */
+    --kanban-new-bg: 217 50% 15%;
+    --kanban-progress-bg: 37 50% 15%;
+    --kanban-repaired-bg: 145 40% 15%;
+    --kanban-scrap-bg: 6 50% 15%;
+    
+    --shadow-glow: 0 0 30px hsl(217 91% 60% / 0.2);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer components {
+  /* Enhanced Stat Card */
+  .stat-card {
+    @apply bg-card rounded-xl p-6 border transition-all duration-300 relative overflow-hidden;
+    box-shadow: var(--shadow);
+  }
+  
+  .stat-card::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.03), transparent);
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
+  }
+  
+  .stat-card:hover::before {
+    @apply opacity-100;
+  }
+
+  /* Enhanced Card Hover */
+  .card-hover {
+    @apply transition-all duration-300;
+    box-shadow: var(--shadow);
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* Status Badge */
+  .status-badge {
+    @apply inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold tracking-wide uppercase;
+  }
+
+  /* Kanban Card - Enhanced */
+  .kanban-card {
+    @apply bg-card rounded-lg p-4 border cursor-grab transition-all duration-200;
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .kanban-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+  
+  .kanban-card.dragging {
+    box-shadow: var(--shadow-xl);
+    transform: scale(1.02) rotate(2deg);
+    @apply ring-2 ring-primary/30;
+  }
+
+  /* Table Row Hover */
+  .table-row-hover {
+    @apply transition-colors duration-150;
+  }
+  
+  .table-row-hover:hover {
+    @apply bg-muted/60;
+  }
+
+  /* Navigation Item */
+  .nav-item {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 relative overflow-hidden;
+  }
+  
+  .nav-item-active {
+    @apply bg-sidebar-accent text-sidebar-accent-foreground;
+  }
+  
+  .nav-item-active::before {
+    content: '';
+    @apply absolute left-0 top-1/2 -translate-y-1/2 w-1 h-6 bg-sidebar-primary rounded-r-full;
+  }
+  
+  .nav-item-inactive {
+    @apply text-sidebar-muted hover:bg-sidebar-accent hover:text-sidebar-accent-foreground;
+  }
+
+  /* Page Headers */
+  .page-header {
+    @apply flex items-center justify-between mb-6;
+  }
+  
+  .page-title {
+    @apply text-2xl font-bold text-foreground tracking-tight;
+  }
+  
+  .section-title {
+    @apply text-lg font-semibold text-foreground mb-4;
+  }
+
+  /* Glassmorphism Effect */
+  .glass {
+    @apply bg-card/80 backdrop-blur-xl border border-border/50;
+  }
+
+  /* Pulse Animation for Overdue */
+  .pulse-danger {
+    animation: pulse-danger 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  @keyframes pulse-danger {
+    0%, 100% {
+      box-shadow: 0 0 0 0 hsl(var(--danger) / 0.4);
+    }
+    50% {
+      box-shadow: 0 0 0 8px hsl(var(--danger) / 0);
+    }
+  }
+
+  /* Shimmer Loading Effect */
+  .shimmer {
+    @apply relative overflow-hidden;
+  }
+  
+  .shimmer::after {
+    content: '';
+    @apply absolute inset-0;
+    background: linear-gradient(90deg, transparent, hsl(var(--foreground) / 0.05), transparent);
+    animation: shimmer 1.5s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  /* Button Press Effect */
+  .btn-press {
+    @apply active:scale-[0.98] transition-transform;
+  }
+
+  /* Countdown Badge */
+  .countdown-badge {
+    @apply inline-flex items-center gap-1.5 px-2 py-0.5 rounded-md text-xs font-medium;
+  }
+  
+  .countdown-badge.overdue {
+    @apply bg-danger/15 text-danger;
+  }
+  
+  .countdown-badge.urgent {
+    @apply bg-warning/15 text-warning;
+  }
+  
+  .countdown-badge.normal {
+    @apply bg-muted text-muted-foreground;
+  }
+
+  /* Filter Chip */
+  .filter-chip {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20 cursor-pointer transition-all hover:bg-primary/20;
+  }
+  
+  .filter-chip .remove {
+    @apply w-4 h-4 hover:bg-primary/20 rounded-full flex items-center justify-center;
+  }
+
+  /* Progress Bar */
+  .progress-bar {
+    @apply h-2 rounded-full bg-muted overflow-hidden;
+  }
+  
+  .progress-bar-fill {
+    @apply h-full rounded-full transition-all duration-500;
+  }
+
+  /* Workload Meter */
+  .workload-meter {
+    @apply h-1.5 rounded-full bg-muted overflow-hidden;
+  }
+  
+  .workload-fill {
+    @apply h-full rounded-full transition-all duration-300;
+  }
+  
+  .workload-fill.low {
+    @apply bg-success;
+  }
+  
+  .workload-fill.medium {
+    @apply bg-warning;
+  }
+  
+  .workload-fill.high {
+    @apply bg-danger;
+  }
+}
+
+@layer utilities {
+  .sidebar-glow {
+    box-shadow: inset -1px 0 0 0 hsl(var(--sidebar-border));
+  }
+
+  /* Animation Utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.4s ease-out forwards;
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out forwards;
+  }
+  
+  .animate-slide-in-right {
+    animation: slideInRight 0.3s ease-out forwards;
+  }
+  
+  .animate-bounce-in {
+    animation: bounceIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  }
+
+  .animate-count {
+    animation: countUp 0.6s ease-out forwards;
+  }
+
+  /* Staggered Animations */
+  .stagger-1 { animation-delay: 0.05s; }
+  .stagger-2 { animation-delay: 0.1s; }
+  .stagger-3 { animation-delay: 0.15s; }
+  .stagger-4 { animation-delay: 0.2s; }
+  .stagger-5 { animation-delay: 0.25s; }
+  .stagger-6 { animation-delay: 0.3s; }
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes scaleIn {
+  from { 
+    opacity: 0; 
+    transform: scale(0.9); 
+  }
+  to { 
+    opacity: 1; 
+    transform: scale(1); 
+  }
+}
+
+@keyframes slideInRight {
+  from { 
+    opacity: 0; 
+    transform: translateX(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateX(0); 
+  }
+}
+
+@keyframes bounceIn {
+  0% { 
+    opacity: 0; 
+    transform: scale(0.3); 
+  }
+  50% { 
+    transform: scale(1.05); 
+  }
+  70% { 
+    transform: scale(0.9); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: scale(1); 
+  }
+}
+
+@keyframes countUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+/* Chart Animations */
+.recharts-wrapper {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.recharts-bar-rectangle,
+.recharts-pie-sector {
+  transition: all 0.3s ease-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.25);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.4);
+}
+
+/* Focus Visible for Accessibility */
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-primary;
+}
+
+/* Skeleton Loading */
+.skeleton {
+  @apply bg-muted animate-pulse rounded;
+}
+
+/* Today highlight for calendar */
+.calendar-today {
+  @apply relative;
+}
+
+.calendar-today::after {
+  content: '';
+  @apply absolute bottom-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-primary;
+}
