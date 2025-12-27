@@ -1,73 +1,119 @@
-# Welcome to your Lovable project
+# GearGuard Frontend
 
-## Project info
+This is the frontend application for GearGuard, a comprehensive equipment management system. Built with modern React technologies, it provides a user-friendly interface for managing equipment inventory, maintenance requests, teams, and analytics.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Tech Stack
 
-## How can I edit this code?
+- **React** - UI library
+- **TypeScript** - Type-safe JavaScript
+- **Vite** - Build tool and dev server
+- **React Router** - Client-side routing
+- **React Query** - Data fetching and caching
+- **ShadCN UI** - Component library
+- **Tailwind CSS** - Utility-first CSS framework
+- **Lucide React** - Icon library
+- **React Hook Form** - Form handling
+- **Zod** - Schema validation
+- **Next Themes** - Theme management
 
-There are several ways of editing your application.
+## Prerequisites
 
-**Use Lovable**
+- Node.js (v18 or higher)
+- npm, yarn, or bun
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## Installation
 
-Changes made via Lovable will be committed automatically to this repo.
+1. Navigate to the frontend directory:
+```bash
+cd frontend
+```
 
-**Use your preferred IDE**
+2. Install dependencies:
+```bash
+npm install
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Development
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will run on `http://localhost:5173` (default Vite port).
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Build
 
-**Use GitHub Codespaces**
+Build for production:
+```bash
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The built files will be in the `dist` directory.
 
-## What technologies are used for this project?
+## Features
 
-This project is built with:
+- **Dashboard**: Overview with statistics and activity timeline
+- **Equipment Management**: CRUD operations for equipment
+- **Team Management**: Organize and manage teams
+- **Request System**: Handle maintenance requests
+- **Kanban Board**: Visual task management
+- **Calendar View**: Schedule maintenance activities
+- **Reports**: Analytics and insights
+- **Authentication**: Secure login/registration
+- **Responsive Design**: Works on desktop and mobile
+- **Dark/Light Theme**: Theme switching support
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Project Structure
 
-## How can I deploy this project?
+```
+frontend/
+├── src/
+│   ├── components/
+│   │   ├── ui/             # ShadCN UI components
+│   │   ├── layout/         # Layout components (Header, Sidebar, MainLayout)
+│   │   ├── common/         # Common components (GlobalSearch, HealthScore, StatusBadge)
+│   │   ├── dashboard/      # Dashboard components (ActivityTimeline, StatCard)
+│   │   ├── equipment/      # Equipment components (EquipmentForm)
+│   │   ├── teams/          # Teams components (TeamForm)
+│   │   ├── requests/       # Requests components (RequestForm)
+│   │   └── pages/          # Page components
+│   ├── contexts/           # React contexts (AuthContext, DataContext, ThemeContext)
+│   ├── hooks/              # Custom hooks
+│   ├── lib/                # Utilities and mock data
+│   ├── types/              # TypeScript type definitions
+│   └── pages/              # Page components
+├── public/                 # Static assets
+├── package.json
+├── vite.config.ts
+├── tailwind.config.ts
+└── tsconfig.json
+```
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+## Scripts
 
-## Can I connect a custom domain to my Lovable project?
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run build:dev` - Build for development
+- `npm run lint` - Run ESLint
+- `npm run preview` - Preview production build
 
-Yes, you can!
+## Environment Variables
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Create a `.env` file in the frontend directory with:
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```
+VITE_API_URL=http://localhost:5000/api
+```
+
+## Contributing
+
+1. Follow the existing code style and structure
+2. Use TypeScript for type safety
+3. Follow React best practices
+4. Test your changes thoroughly
+5. Update documentation as needed
+
+## License
+
+This project is part of GearGuard and follows the same license terms.
