@@ -1,0 +1,16 @@
+[
+  {
+    "id": "13739737-6fa5-49bd-a706-b5b80384dbb5",
+    "status": "Repaired",
+    "createdAt": "2025-12-27T09:50:05.436Z",
+    "updatedAt": "2025-12-27T10:21:20.412Z",
+    "teamId": "72216312-34bb-4d34-8d66-6fbb0721d27a",
+    "subject": "Bug fixes",
+    "equipmentId": "0f92b0eb-0606-4ccc-9f03-6d90921e16b1",
+    "type": "Corrective",
+    "scheduledDate": "2025-12-28T00:00:00.000Z",
+    "assignedTo": "Maitri",
+    "description": "Fix the website issues",
+    "priority": "High"
+  }
+]
